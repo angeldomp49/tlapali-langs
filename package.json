@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@makechtec/tlapali_dev": "^1.0.0"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.3"
+  },
+  "types": "./index.d.ts",
+  "name": "@makechtec/tlapali_langs",
+  "version": "1.0.0",
+  "description": "language constants for tlapali",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc && terser prebuild/index.js --output index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tlapali"
+  ],
+  "author": "Makech Tec",
+  "license": "MIT"
+}

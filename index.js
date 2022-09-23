@@ -1,0 +1,1 @@
+"use strict";exports.__esModule=true;exports.Java=void 0;exports.Java={name:"java",keywords:["public","class"],rules:[{name:"class_declaration",pattern:"class\\s*(?<target>[A-z]*)\\s\\{"}]};
