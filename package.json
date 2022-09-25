@@ -12,7 +12,7 @@
   },
   "types": "./index.d.ts",
   "name": "@makechtec/tlapali_langs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "language constants for tlapali",
   "main": "index.js",
   "scripts": {

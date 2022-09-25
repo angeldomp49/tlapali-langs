@@ -57,20 +57,28 @@ export const Java: Lang = {
     rules:[
         {
             "name": "class_declaration",
-            "pattern": "class\\s*(?<target>[A-z]*)\\s\\{"
+            "pattern": "class\\s+(?<target>\\w*)\\s*\\{"
+        },
+        {
+            "name": "class_name",
+            "pattern": "[^\\w'](?<target>[A-Z]\\w+)\\W"
         },
         {
             "name": "import_declaration",
-            "pattern": "import\\s+[A-z|\\d|\\_|\\.]+\\.(?<target>[A-z|\\d\\_]+);$"
+            "pattern": "import\\s+[\\w|\\.]+\\.(?<target>\\w+);"
         },
         {
             "name": "variable_declaration",
-            "pattern": "(private|public|package|protected)?(\\s*)([A-z\\d\\_]+)(\\s+)(?<target>[A-z\\d\\_]+)(\\s*)(;|=\\s*.+;)"
+            "pattern": "\\s+(?<target>\\w+)\\s*(;|=)"
         },
         {
             "name": "method_declaration",
-            "pattern": "[A-z|\\d|_]+\\s+(?<target>[A-z|\\d|_]*)\\s*\\([A-z\\d\\_|,|\\.|\\s|\\[\\]]*\\)\\s*\\{"
+            "pattern": "\\w+\\s+(?<target>\\w+)\\s*\\("
         },
+        {
+            name: "curly_brackets",
+            pattern: "(?<target>\\{|\\})"
+        }
 
     ]
 }
